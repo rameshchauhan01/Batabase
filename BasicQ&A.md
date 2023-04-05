@@ -1,10 +1,10 @@
-Multiple table join Query:
+Multiple table join Query:</b>
     SELECT t1.col, t3.col 
     FROM table1 t1 
     JOIN table2 t2 ON t1.primarykey = t2.foreignkey                                  
     JOIN table3 t3 ON t2.primarykey = t3.foreignkey
-
-Retrive the data from same table bases on condition:
+</b>
+Retrive the data from same table bases on condition: </b>
 	SELECT a.ROLL_NO , b.NAME
 	FROM Student a, Student b
 	WHERE a.ROLL_NO < b.ROLL_NO;
@@ -118,7 +118,7 @@ What is a DDL command?
 	TRUNCATE: It is used to completely remove all data from a table, including their structure and space allocates on the server.
 	RENAME: This command renames the content in the database.
 
-The following points explain the main differences between DDL and DML commands:
+The following points explain the main differences between DDL and DML commands:</br>
 	Data Definition Language (DDL) statements describe the structure of a database or schema. Data Manipulation Language (DML) statements, on the other hand, allow altering data that already exists in the database.
 	We use the DDL commands for creating the database or schema, while DML commands are used to populate and manipulate the database.
 	DDL commands can affect the whole database or table, whereas DML statements only affect single or multiple rows based on the condition specified in a query.
