@@ -26,4 +26,4 @@ SELECT A.CustName AS CustName1, B.CustName AS CustName2, A.City
 FROM Customers A, Customers B  
 WHERE A.CustID <> B.CustID   
 AND A.City = B.City   
-ORDER BY A.City;   
+ORDER BY A.City;
