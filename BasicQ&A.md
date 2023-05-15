@@ -147,7 +147,8 @@ ID	FirstName	LastName	ReportsTo	Position	Age
 6	David		S		Jenny Richards	Director	32
 7	Ashley		Wells		David S		Assistant	25
 8	Ashley		Johnson		null		Intern		25
-Solution:
+<br/>
+Solution: <br/>
 SELECT ReportsTo, count(ReportsTo) as Members,
  round(avg(Age), 0) as 'Average Age' 
  FROM maintable_SGDS8
