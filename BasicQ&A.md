@@ -135,3 +135,23 @@ The following points explain the main differences between DDL and DML commands:<
 	Since DDL commands are auto-committed, modifications are permanent and cannot be reversed. DML statements, on the other hand, are not auto-committed, which means that modifications are not permanent and can be reversed.
 	DML is an imperative and procedural method, whereas DDL is a declarative method.
 	The data in DML statements can be filtered with a WHERE clause, while the records in DDL statements cannot be filtered with a WHERE clause.
+	
+###  return the names of the people who are reported to (excluding null values), the number of members that report to them, and the average age of those members as an integer. The rows should be ordered by the names in alphabetical order  <br/>
+Table:
+ID	FirstName	LastName	ReportsTo	Position	Age
+1	Daniel		Smith		Bob Boss	Engineer	25
+2	Mike		White		Bob Boss	Contractor	22
+3	Jenny		Richards	null		CEO		45
+4	Robert		Black		Daniel Smith	Sales		22
+5	Noah		Fritz		Jenny Richards	Assistant	30
+6	David		S		Jenny Richards	Director	32
+7	Ashley		Wells		David S		Assistant	25
+8	Ashley		Johnson		null		Intern		25
+Solution:
+SELECT ReportsTo, count(ReportsTo) as Members,
+ round(avg(Age), 0) as 'Average Age' 
+ FROM maintable_SGDS8
+Where ReportsTo IS NOT NULL
+Group by ReportsTo
+order by ReportsTo
+
